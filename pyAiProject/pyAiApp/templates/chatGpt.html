@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Khalid Chat Gpt</title>
+</head>
+<body>
+    <a href="/"> Back Home</a>
+    <form action="openAiChatGpt" method="post">
+        {%csrf_token%}
+            <textarea name="chatData"> </textarea>
+        <button>Ask</button>
+    </form>  
+    <div>
+        {{request.session.data_out}}
+    </div>
+
+    <div class="x">
+        created By Khalid Khader
+    </div>
+
+    
+</body>
+</html>
+
